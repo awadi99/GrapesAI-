@@ -1,6 +1,6 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 
-export default function Leaf3D(){
+export default function Leaf3D() {
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -18,34 +18,25 @@ export default function Leaf3D(){
       className="relative flex items-center justify-center"
     >
 
-      <div className="absolute w-[500px] h-[500px] bg-green-400 opacity-25 blur-[180px] rounded-full"></div>
+      {/* 🌈 Glow */}
+      <div className="absolute w-[600px] h-[600px] bg-green-400 opacity-20 blur-[200px] rounded-full"></div>
 
-      <motion.div
-  style={{ rotateX, rotateY }}
-  animate={{
-    y: [0, -50, 0],
-    rotate: [0, 12, -12, 0],
-  }}
-  transition={{
-    duration: 6,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-  className="relative z-10"
->
-  <svg
-    width="320"
-    height="320"
-    viewBox="0 0 24 24"
-    fill="none"
-    className="text-green-400 drop-shadow-[0_0_80px_rgba(34,197,94,1)]"
-  >
-    <path
-      d="M12 2C7 7 4 10 4 14a8 8 0 0016 0c0-4-3-7-8-12z"
-      fill="currentColor"
-    />
-  </svg>
-</motion.div>
+      {/* 🍃 YOUR IMAGE LEAF */}
+      <motion.img
+        src="/image/icon.png"  // 👉 put your image in public folder
+        alt="leaf"
+        style={{ rotateX, rotateY }}
+        animate={{
+          y: [0, -40, 0],
+          rotate: [0, 8, -8, 0],
+        }}
+        transition={{
+          duration: 6,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="relative z-10 w-[400px] drop-shadow-[0_0_60px_rgba(34,197,94,0.8)]"
+      />
 
     </div>
   );
