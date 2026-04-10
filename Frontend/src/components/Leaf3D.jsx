@@ -18,12 +18,11 @@ export default function Leaf3D() {
       className="relative flex items-center justify-center"
     >
 
-      {/* 🌈 Glow */}
+    
       <div className="absolute w-[600px] h-[600px] bg-green-400 opacity-20 blur-[200px] rounded-full"></div>
 
-      {/* 🍃 YOUR IMAGE LEAF */}
       <motion.img
-        src="/image/icon.png"  // 👉 put your image in public folder
+        src="/image/icon.png"  
         alt="leaf"
         style={{ rotateX, rotateY }}
         animate={{
