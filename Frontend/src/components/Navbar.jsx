@@ -61,7 +61,6 @@ export default function Navbar() {
         </div>
       </div>
 
-
       {open && (
         <div className="md:hidden bg-black/80 backdrop-blur-xl px-6 pb-6">
 
