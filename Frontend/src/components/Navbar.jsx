@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-scroll";
+import { HashRouter } from "react-router-dom";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -44,7 +45,7 @@ export default function Navbar() {
 
         <div className="hidden md:block">
           <a
-            href="/result"
+            href="/#/result"
             className="px-5 py-2 rounded-lg bg-gradient-to-r from-green-400 to-teal-400 text-black font-semibold shadow hover:scale-105 transition"
           >
             Get Started
